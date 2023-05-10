@@ -18,9 +18,16 @@ public class PlayerMovement : MonoBehaviour
     {
         float y = Input.GetAxis("Vertical");
         float yMouse = Input.GetAxis("Mouse ScrollWheel");
-        Vector2 movement = new Vector2(0, y);
-        Vector2 mouseMovement = new Vector2(0, yMouse);
-        transform.Translate(movement * speed * Time.deltaTime);
-        transform.Translate(mouseMovement * mouseSpeed * Time.deltaTime);
+        if (transform.position.y > -5f || transform.position.y < 5f)
+        {
+            Vector2 movement = new Vector2(0, y);
+            Vector2 mouseMovement = new Vector2(0, yMouse);
+            transform.Translate(movement * speed * Time.deltaTime);
+            transform.Translate(mouseMovement * mouseSpeed * Time.deltaTime);
+        }
+        if (transform.position.y < -5f || transform.position.y > 5f)
+        {
+            Debug.Log("Hey you cant move");
+        }
     }
 }
