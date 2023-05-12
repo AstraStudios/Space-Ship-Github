@@ -5768,7 +5768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   versionText: {fileID: 1678447478}
-  highscoreText: {fileID: 0}
+  highscoreText: {fileID: 1981617695}
 --- !u!1 &788407459
 GameObject:
   m_ObjectHideFlags: 0
