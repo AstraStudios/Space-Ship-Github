@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] TMP_Text lostText;
     [SerializeField] TMP_Text scoreText;
     [SerializeField] TMP_Text highscoreText;
+    [SerializeField] GameObject highscore;
     [SerializeField] GameObject restartButton;
     [SerializeField] GameObject backToMenuButton;
 
@@ -41,6 +41,7 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("Game Paused");
             restartButton.SetActive(true);
             backToMenuButton.SetActive(true);
+            highscore.SetActive(true);
             highscoreText.text = "Your highscore is: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
         }
     }

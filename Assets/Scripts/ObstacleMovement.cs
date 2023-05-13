@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleMovement : MonoBehaviour
 {
     float destroyPoint = -30f;
-    float speed = 10f;
+    float speed = 20f;
 
     // Start is called before the first frame update
     void Start()
