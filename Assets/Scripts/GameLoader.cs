@@ -8,7 +8,7 @@ public class GameLoader : MonoBehaviour
 {
     [SerializeField] TMP_Text versionText;
     [SerializeField] TMP_Text highscoreText;
-    string version = "Version 1.0";
+    string version = "Version 1.1 Stable";
 
     // Start is called before the first frame update
     void Start()
